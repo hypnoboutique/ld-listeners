@@ -1,0 +1,148 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "react-native/react-native": true
+  },
+  "extends": [
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "airbnb-typescript",
+    "plugin:jest/recommended",
+    "plugin:wdio/recommended",
+    "prettier",
+    "plugin:react-hooks/recommended"
+
+  ],
+  "overrides": [
+    {
+      "files": ["**/*.tsx"],
+      "rules": {
+        "react/prop-types": "off"
+      }
+    },
+    {
+      "files": ["**/*.d.ts"],
+      "rules": {
+        "@typescript-eslint/no-unused-vars": "off"
+      }
+    }
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "import",
+    "jsx-a11y",
+    "module-resolver",
+    "prettier",
+    "react-native",
+    "react",
+    "simple-import-sort",
+    "wdio"
+  ],
+  "rules": {
+    "@typescript-eslint/ban-types": "warn",
+    "@typescript-eslint/camelcase": 0,
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-non-null-asserted-optional-chain": "off",
+    "@typescript-eslint/no-shadow": "error",
+    "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+    "@typescript-eslint/no-unused-expressions": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "@typescript-eslint/prefer-as-const": "off",
+    "react/require-default-props": "off",
+    "arrow-parens": 0,
+    "camelcase": 0,
+    "comma-dangle": ["error", "always-multiline"],
+    "implicit-arrow-linebreak": 0,
+    "import/extensions": ["error", "ignorePackages", {
+      "js": "never",
+      "jsx": "never",
+      "ts": "never",
+      "tsx": "never"
+    }],
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
+    "import/no-extraneous-dependencies": 0,
+    "import/no-named-as-default": 0,
+    "import/order": "off",
+    "import/prefer-default-export": "off",
+    "jest/expect-expect": [
+      "error",
+      {
+        "assertFunctionNames": ["expect", "assert"]
+      }
+    ],
+    "jsx-a11y/accessible-emoji": "off",
+    "module-resolver/use-alias": 2,
+    "no-console": 1,
+    "no-param-reassign": 1,
+    "no-shadow": "off",
+    "no-tabs": 0,
+    "no-unused-expressions": "off",
+    "no-use-before-define": "off",
+    "object-curly-newline": 0,
+    "prefer-const": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "trailingComma": "all"
+      }
+    ],
+    "react-native/no-color-literals": 2,
+    "react-native/no-inline-styles": 2,
+    "react-native/no-unused-styles": 2,
+    "react-native/split-platform-components": 1,
+    "react/forbid-prop-types": 0,
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    ],
+    "react/jsx-no-bind": 1,
+    "react/jsx-props-no-spreading": 0,
+    "react/no-did-update-set-state": 1,
+    "react/no-unused-prop-types": [
+      1,
+      {
+        "skipShapeProps": true
+      }
+    ],
+    "react/prefer-es6-class": 1,
+    "react/prop-types": ["error", { "ignore": ["navigation"] }],
+    "react/sort-comp": [0],
+    "simple-import-sort/sort": ["error", {
+      "groups": [
+        ["^\\u0000"],
+        ["^react$", "^react-native$"],
+        ["^@?\\w"],
+        ["^[^.]"],
+        ["(^@atoms$|^@atoms$/*|^@molecules$|^@organisms$|^@templates$|^@screens$)"],
+        ["(^@analytics$|@attribution|@hooks$|@jest-utils|@navigation|@navigation/*|@services$|@services/*|@storybookhelpers$|src/*)"],
+        ["^\\."]
+      ]
+    }],
+    "sort-imports": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-module": {},
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
+        "paths": ["node_modules", "src/"]
+      }
+    },
+    "react": {
+      "pragma": "React",
+      "version": "16.9.0"
+    }
+  }
+}

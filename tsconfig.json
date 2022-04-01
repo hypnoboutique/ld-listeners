@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "jsx": "react",
+    "lib": ["es6"],
+    "moduleResolution": "node",
+    "noEmit": true,
+    "target": "esnext",
+    "resolveJsonModule": true,
+    "types": [
+      "jest",
+      "node",
+      "webdriverio/async"
+    ],
+    "baseUrl": ".",
+    "paths": {}
+  },
+  "include": [
+    "__mocks__",
+    "./index.js",
+    "babel.config.js",
+    "e2e",
+    "jest.config.js",
+    "metro.config.js",
+    "react-native.config.js",
+    "scripts",
+    "setup",
+    "src",
+    "storybook",
+    "config",
+    "test"
+  ]
+}
