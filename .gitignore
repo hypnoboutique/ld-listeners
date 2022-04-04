@@ -81,3 +81,5 @@ automated-tests-master/
 
 # CocoaPods
 /ios/Pods/
+
+.env
