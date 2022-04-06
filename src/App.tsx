@@ -33,6 +33,7 @@ init();
 
 const App: () => React.ReactNode = () => {
   const callback = () => console.log('callback 1');
+  console.log();
 
   const addListener = () => {
     console.log('Adding listener 1');
