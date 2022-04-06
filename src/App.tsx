@@ -32,16 +32,16 @@ const init = async () => {
 init();
 
 const App: () => React.ReactNode = () => {
-  const callback = () => console.log('callback 1');
+  const callback = () => console.log('callback');
   console.log();
 
   const addListener = () => {
-    console.log('Adding listener 1');
+    console.log('Adding listener');
     client.registerFeatureFlagListener(LISTEN_FLAG, callback);
   };
 
   const removeListener = () => {
-    console.log('Removing listener 1');
+    console.log('Removing listener');
     client.unregisterFeatureFlagListener(LISTEN_FLAG, callback);
   };
 
@@ -51,18 +51,12 @@ const App: () => React.ReactNode = () => {
     console.log(client.flagListeners);
   };
 
-  const reInit = async () => {
-    await client.close();
-    await init();
-  };
-
   return (
     <SafeAreaView>
       <Text>Hello world</Text>
       <Button onPress={addListener} title="add listener" />
       <Button onPress={removeListener} title="remove listener" />
-      <Button onPress={viewListeners} title="View listeners" />
-      <Button onPress={reInit} title="Kill everything" />
+      <Button onPress={viewListeners} title="view listeners" />
     </SafeAreaView>
   );
 };
